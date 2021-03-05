@@ -9,7 +9,7 @@ Développement d'applications mobiles avec les encadrant
  - Youssef Chahir
 ```
 
-## Dans le groupe il y a 
+## Dans le groupe
 ```
 Baptiste Poree 21508889
 Ghani Tabbou 21914630
