@@ -2,7 +2,11 @@
 
 ##TP (Travail Pratique) Noter, Développement d'applications mobiles
 ```
-Développement d'applications mobiles avec les encadrant Jean-Marc Lecarpentier, Thomas Ledesert, Francois Rioult et Youssef Chahir.
+Développement d'applications mobiles avec les encadrant 
+ - Jean-Marc Lecarpentier
+ - Thomas Ledesert 
+ - Francois Rioult  
+ - Youssef Chahir
 ```
 
 ## Dans le groupe il y a 
