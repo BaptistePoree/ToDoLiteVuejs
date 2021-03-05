@@ -1,5 +1,17 @@
 # todoliste
 
+##TP (Travail Pratique) Noter, Développement d'applications mobiles
+```
+Développement d'applications mobiles avec les encadrant Jean-Marc Lecarpentier, Thomas Ledesert, Francois Rioult et Youssef Chahir.
+```
+
+## Dans le groupe il y a 
+```
+Baptiste Poree 21508889
+Ghani Tabbou 21914630
+Mahamadou Doucoure 21912721
+```
+
 ## Project setup
 ```
 npm install
