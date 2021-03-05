@@ -14,6 +14,7 @@ Développement d'applications mobiles avec les encadrant
 Baptiste Poree 21508889
 Ghani Tabbou 21914630
 Mahamadou Doucoure 21912721
+HAMON Robin 21304849
 ```
 
 ## Project setup
