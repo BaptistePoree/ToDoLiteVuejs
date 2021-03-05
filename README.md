@@ -1,6 +1,6 @@
 # todoliste
 
-##TP (Travail Pratique) Noter, Développement d'applications mobiles
+## TP (Travail Pratique) Noter, Développement d'applications mobiles
 ```
 Développement d'applications mobiles avec les encadrant 
  - Jean-Marc Lecarpentier
