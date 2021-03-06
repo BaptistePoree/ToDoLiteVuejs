@@ -1,0 +1,84 @@
+https://www.craft.do/s/2P2T9QqKVIUUZj
+
+
+Projet de groupe
+
+    Introduction :
+        Vous avez les 4 séances de TP restantes pour réaliser ce projet.
+        Vous devez travailler en groupe de 3 à 5 étudiants.
+        Vous devez travailler en utilisant Git (hébergé sur Github ou Gitlab) from day 1, la bonne utilisation et collaboration fera partie de la note (utilisation des branches, dommage des commits …). Votre repo doit être public et vous devez l’indiquer dès le début du projet.
+        Vous devez inscrire votre groupe sur le fichier suivant : https://docs.google.com/spreadsheets/d/1ZexML92Q0_jbHFP6jWFwHwCsa4yldtZN-lJ2NXjuydo/edit?usp=sharing (attention à ne pas supprimer ou remplacer les lignes de vos camarades, on écrit « à la fin de la liste » ). Dans votre case étudiant indiqué vos nom prénom et identifiant d'étudiant.
+
+    Présentation du projet :
+        L’objectif du projet est de réaliser une application de gestion de tâches (todolist) complète, en Vue.js uniquement (pas de ionic).
+        Vous pouvez donc repartir de ce que vous aviez commencé à faire lors du TP3.
+        L’application permettra de : 
+            • Créer un compte ou s’authentifier à l'API pour récupérer ses informations et un token de connexion (qui sera utiliser dans tous les autres appels API)
+            • Créer une liste
+            • Afficher les listes
+            • Afficher les todos d’une liste
+            • Créer, modifier, compléter, supprimer des todos
+            • Filtrer l’affichage des todos
+            • Afficher le nombre de todos non faites
+
+        Voici une version non désignée d’exemple (il manque un bouton dans la sidebar pour ajouter une liste) :
+
+        La documentation de l’API qui sera utilisée est disponible ici : 
+            https://documenter.getpostman.com/view/570147/TVRrU4GY
+        Le projet Postman est dispo ici : 
+            https://www.getpostman.com/collections/6837c744719d722b66fb
+
+        Niveau organisation et découpage, vous pouvez partir sur le suivant.
+
+    Partie 1 : Application de base
+        En repartant sur le TP3 : 
+            • todo list de base (affichage, ajout, complétion, suppression)
+            • mise en place
+            • store
+            • composants
+        L’objectif de cette partie est la reprise et la finalisation du composant central de la capture d’écran.
+
+        Ainsi que la préparation de la bonne organisation des fichiers du projet.
+        Si vous avez commencé à travailler sans avoir lu l’intégralité du sujet levez la main que je vous enlève un point ;) . Sinon vous avez vu que nous allions avoir plusieurs vues / pages et que nous aurions 2 notions différentes au niveau du store, les todolistes et la partie user pour l’authentification. 
+        Donc dans la mise en place du store il faut partir sur la version complète et découpée car nous utiliserons 2 modules de store.
+        De même la capture ci-dessus correspond à un composant (voir plus si vous souhaitez découper encore plus). Nous séparerons donc les pages (login et todoliste) et les composants dans 2 dossiers séparés.
+        A titre d’info voila un exemple de ce à quoi votre organisation peut ressembler.
+
+    Partie 2 : Listes et routing
+        • Ajouter la gestion des listes de todoliste (Création et affichage)
+            • Créer un composant sidebar.vue qui contiendra la liste des listes. Il devra aussi permettre d’en créer une (car au départ vous n’aurez aucune liste )
+            • un clic sur une liste charge ses todos dans le composant principal todolist (utiliser une props)
+        • Ajouter et configurer vue-router pour gérer la direction entre les 2 pages login et todoliste (home chez moi).
+        • Ajouter et utiliser axios juste pour l'auth et gestion de la protection de route/redirection lorsque l’utilisateur n’est pas connecté
+            • Votre store account aura 2 actions : login et register (et aussi logout si vous souhaiter pouvoir vous déconnecter de l’application ). Ces actions vont faire un appel aux endpoints d’API correspondant et recevront lorsque la réponse est OK un token.
+            Ce token doit être stocké dans le State de votre store car il sera nécessaire à tous les autres appels API pour pouvoir vous authentifier.
+        • Coder la vue login qui servira à la création d’un compte et à l’authentification (vous pouvez créer 2 composants différents qui peuvent être appelés dans 2 « onglets » par exemple).
+
+
+    Partie 3 : Connexion à l’API
+        Objectif de cette partie :
+            • Modifier le store VueX pour se connecter à l’API pour toutes les opérations :
+                • load listes from server
+                • save to server
+
+        Ici le gros du travail va se faire au niveau du store todolist.
+        Au niveau des actions vous devez avoir :
+            • Récupération des todolistes
+            • Création d’une todoliste
+            • Récupération des todos d’une liste
+            • Création d’une todo dans une liste
+            • Marquer une todo comme completed ou non
+            • Modifier une todo
+        Bien évidemment il vous faut les mutations correspondantes qui seront appelées par les actions et qui viendront modifier le State du store.
+
+
+    Partie 4 : gestion des données en local
+        • Ajouter la gestion du localStorage pour persister les données en local.
+            • Dans un premier temps pour stocker le token renvoyé par l’authentification.
+            • Puis proposer une architecture pour que l’application puisse stocker ses données intégralement dans le localStorage avec une synchronisation des données avec l’API.
+
+    Bonus
+        • ajouter une petite couche de design à tout ça (vous pouvez utiliser un framework type Bootstrap, Tailwind …)
+        • ajouter les compteurs de todos restantes sur les listes et au global
+        • Surcouche API GraphQL
+        • Gestion de raccourcis clavier
