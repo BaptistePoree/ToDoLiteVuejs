@@ -15,6 +15,7 @@ Baptiste Poree 21508889
 Ghani Tabbou 21914630
 Mahamadou Doucoure 21912721
 HAMON Robin 21304849
+WANG Yibo 22010215
 ```
 
 ## Project setup
