@@ -20,7 +20,8 @@ WANG Yibo 22010215
 
 ## Project setup
 ```
-npm install
+npm install 
+npm install --save axios vue-router@next vuex
 ```
 
 ### Compiles and hot-reloads for development
