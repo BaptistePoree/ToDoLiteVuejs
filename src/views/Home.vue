@@ -3,9 +3,9 @@
 
 
  <div class="create">
-  <input type="text" v-model="newTodo">
+  <input type="text" v-model="newTodo" @keyup.enter="ajouter()">
  <!-- <button v-on:click="ajouter()" disabled v-if="detecter()">Ajouter</button>-->
-  <button v-on:click="ajouter()"   >Ajouter</button>
+  <!--<button v-on:click="ajouter()"   >Ajouter</button>-->
 </div>
 
 
@@ -71,12 +71,12 @@ import Todo from '@/components/Todo.vue';
 
             ajouter(){
               this.todos.push({
-                id: this.id,
+                id: this.todos.length+1,
                 name: this.newTodo,
                 completed: false
               })
 
-              this.id++;
+              
               this.newTodo='';
 
             },
