@@ -117,7 +117,6 @@ button
 /* les taches de la toDoListe */
 
 .toDoListe-liste {
-	margin: 0;
 	padding: 0;
 	list-style: none;
 }
@@ -151,7 +150,7 @@ button
 .toDoListe-liste li .destroy:hover, 
 .toDoListe-liste li .destroy:after{
 	color: #af5b5e;
-    content: '×';
+    content: 'X';
 }
 
 

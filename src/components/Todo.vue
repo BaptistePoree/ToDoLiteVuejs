@@ -1,16 +1,20 @@
 <template>
 <div>
 
-
-
-
-<div class="Todolist">
+<div class="view">
     
     <h2>
-        <input type="checkbox" name="cb" checked v-if="todo.completed" @change="updateComplete(todo)" >
+        <!-- <input type="checkbox" name="cb" checked v-if="todo.completed" @change="updateComplete(todo)" >
         <input type="checkbox" name="cb" v-else @change="updateComplete(todo)">
-        {{ todo.name }}
-        <button v-on:click="supprimer(todo)">supprimer</button>
+        <label> {{todo.name}} </label>
+        <button v-on:click="supprimer(todo)">supprimer</button> -->
+
+        
+        <input class="toggle" type="checkbox" name="cb" checked v-if="todo.completed" @change="updateComplete(todo)" >
+        <input class="toggle" type="checkbox" name="cb" v-else @change="updateComplete(todo)">
+        <label> {{todo.name}} </label>
+        <button class="destroy" v-on:click="supprimer(todo)"></button> 
+       
     </h2>
        <!-- -->
     

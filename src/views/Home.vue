@@ -1,28 +1,33 @@
 <template>
-<div>
+<div class="toDoListeApp">
 
 
- <div class="create">
-  <input type="text" v-model="newTodo" @keyup.enter="ajouter()">
- <!-- <button v-on:click="ajouter()" disabled v-if="detecter()">Ajouter</button>-->
-  <!--<button v-on:click="ajouter()"   >Ajouter</button>-->
-</div>
+ <div class="header"> 
+    <h1>ToDoListe</h1> 
+    <h2> {{TitreToDoListe}} </h2> 
+  </div>
+  <div class="main"> 
+    <div class="mainTodoListe"> 
+      <div>
+        <input type="text" class="new-toDoListe" placeholder="Ajouter une tache" v-model="newTodo" @keyup.enter="ajouter()">
+      </div>
+    </div>
+  </div>
 
+  <div class="flooter">
+    <input type="radio" v-model="selected" value="Tous" id="tous" v-on:change="updateOptionTous()">
+    <label for="study">Tous</label> &nbsp;
+    <input type="radio" v-model="selected" value="A faire" id="afaire" v-on:change="updateOptionAfaire()">
+    <label for="study">A faire</label> &nbsp;
+    <input type="radio" v-model="selected" value="Fini" id="fini" v-on:change="updateOptionFini()">
+    <label for="study">Fini</label><br>
+    <p>Votre option：{{selected}}</p>
+  </div>
 
-
-<div class="option">
-  <input type="radio" v-model="selected" value="Tous" id="tous" v-on:change="updateOptionTous()">
-  <label for="study">Tous</label> &nbsp;
-  <input type="radio" v-model="selected" value="A faire" id="afaire" v-on:change="updateOptionAfaire()">
-  <label for="study">A faire</label> &nbsp;
-  <input type="radio" v-model="selected" value="Fini" id="fini" v-on:change="updateOptionFini()">
-  <label for="study">Fini</label><br>
-  <p>Votre option：{{selected}}</p>
-</div>
-
- <div class="home">
-     <ul style="list-style-type: none">
-        <li v-for="todo in filteredtodos" v-bind:key="todo.id">
+ <div>
+     <!-- <ul> -->
+     <ul class="toDoListe-liste">
+        <li class="toDoListe" v-for="todo in filteredtodos" v-bind:key="todo.id" :class="{completed: todo.completed}">
             <todo :id="todo.id"></todo>
             
         </li>
@@ -120,3 +125,4 @@ import Todo from '@/components/Todo.vue';
 </script>
 
 
+<style src="./../components/toDoListe.css" > </style>
