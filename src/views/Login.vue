@@ -46,7 +46,7 @@ export default {
 }
 form {
   margin: 0 auto;
-  width: 500px; /*find your value*/
+  width: 500px;  /*find your value*/
   text-align: center;
 }
 </style>
