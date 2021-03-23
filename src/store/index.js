@@ -4,6 +4,7 @@ import todolist from './todolist';
 export default createStore({
   debug: true,
   modules: {
-    todolist
+    todolist,
+    account
   }
 })
